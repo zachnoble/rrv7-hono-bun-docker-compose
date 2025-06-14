@@ -1,0 +1,70 @@
+{
+	"$schema": "https://biomejs.dev/schemas/1.7.0/schema.json",
+	"formatter": {
+		"enabled": true,
+		"indentStyle": "tab",
+		"indentWidth": 4,
+		"lineWidth": 100,
+		"ignore": ["**/build/**", "**/dist/**", "**/coverage/**", "**/node_modules/**"]
+	},
+	"organizeImports": {
+		"enabled": true
+	},
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"complexity": {
+				"noExtraBooleanCast": "error",
+				"noUselessTypeConstraint": "error"
+			},
+			"correctness": {
+				"noConstAssign": "error",
+				"noConstantCondition": "error",
+				"noInvalidConstructorSuper": "error",
+				"noUnreachable": "error",
+				"noUnsafeFinally": "error",
+				"noUnsafeOptionalChaining": "error",
+				"noUnusedImports": "error",
+				"noUnusedLabels": "error",
+				"noUnusedVariables": "error",
+				"useValidForDirection": "error"
+			},
+			"style": {
+				"noNamespace": "error",
+				"useAsConstAssertion": "error",
+				"useBlockStatements": "off"
+			},
+			"suspicious": {
+				"noAsyncPromiseExecutor": "error",
+				"noArrayIndexKey": "off",
+				"noCatchAssign": "error",
+				"noClassAssign": "error",
+				"noDuplicateParameters": "error",
+				"noExplicitAny": "error",
+				"noExtraNonNullAssertion": "error",
+				"noFunctionAssign": "error",
+				"noImportAssign": "error",
+				"noPrototypeBuiltins": "error",
+				"noRedeclare": "error",
+				"noShadowRestrictedNames": "error",
+				"noUnsafeNegation": "error",
+				"useGetterReturn": "error"
+			}
+		},
+		"ignore": ["**/build/**", "**/dist/**", "**/node_modules/**"]
+	},
+	"javascript": {
+		"formatter": {
+			"quoteProperties": "asNeeded",
+			"semicolons": "asNeeded",
+			"arrowParentheses": "always",
+			"bracketSpacing": true,
+			"bracketSameLine": false,
+			"quoteStyle": "single",
+			"attributePosition": "auto"
+		}
+	},
+	"files": {
+		"ignore": ["**/build/**", "**/dist/**", "**/node_modules/**"]
+	}
+}

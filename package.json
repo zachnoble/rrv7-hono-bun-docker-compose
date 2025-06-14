@@ -1,0 +1,40 @@
+{
+	"name": "rrv7-hono-bun-docker-compose",
+	"scripts": {
+		"setup": "concurrently -n backend,frontend -c cyan,magenta \"bun run setup:backend\" \"bun run setup:frontend\"",
+		"setup:backend": "cd backend && bun install",
+		"setup:frontend": "cd frontend && bun install",
+
+		"dev": "concurrently -n backend,frontend -c cyan,magenta \"bun run dev:backend\" \"bun run dev:frontend\"",
+		"dev:backend": "cd backend && bun run dev",
+		"dev:frontend": "cd frontend && bun run dev",
+
+		"build": "concurrently -n backend,frontend -c cyan,magenta \"bun run build:backend\" \"bun run build:frontend\"",
+		"build:backend": "cd backend && bun run build",
+		"build:frontend": "cd frontend && bun run build",
+
+		"start": "concurrently -n backend,frontend -c cyan,magenta \"bun run start:backend\" \"bun run start:frontend\"",
+		"start:backend": "cd backend && bun run start",
+		"start:frontend": "cd frontend && bun run start",
+
+		"biome": "concurrently -n backend,frontend -c cyan,magenta \"bun run biome:backend\" \"bun run biome:frontend\"",
+		"biome:backend": "cd backend && bun run biome",
+		"biome:frontend": "cd frontend && bun run biome",
+
+		"typecheck": "concurrently -n backend,frontend -c cyan,magenta \"bun run typecheck:backend\" \"bun run typecheck:frontend\"",
+		"typecheck:backend": "cd backend && bun run typecheck",
+		"typecheck:frontend": "cd frontend && bun run typecheck",
+
+		"test": "concurrently -n backend,frontend -c cyan,magenta \"bun run test:backend\" \"bun run test:frontend\"",
+		"test:backend": "cd backend && bun run test",
+		"test:frontend": "cd frontend && bun run test",
+
+		"generate": "cd backend && bun run generate",
+		"migrate": "cd backend && bun run migrate"
+	},
+
+	"devDependencies": {
+		"@biomejs/biome": "^1.9.4",
+		"concurrently": "^8.0.0"
+	}
+}
